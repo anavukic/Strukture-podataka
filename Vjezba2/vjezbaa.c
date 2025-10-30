@@ -33,7 +33,7 @@ int main() {
     if (found != NULL)
         printf("\nPronadena osoba: %s %s %d\n", found->firstName, found->lastName, found->birthYear);
     else
-        printf("\nOsoba nije pronaðena.\n");
+        printf("\nOsoba nije pronaÃ°ena.\n");
 
     DeleteByLastName("Matic", &Head);
     printf("\nLista nakon brisanja:\n");
@@ -107,14 +107,16 @@ int DeleteByLastName(char* lastName, Position p) {
     }
 
     if (p->NEXT == NULL) {
-        printf("Osoba s prezimenom %s nije pronaðena.\n", lastName);
+        printf("Osoba s prezimenom %s nije pronaÃ°ena.\n", lastName);
         return EXIT_FAILURE;
     }
 
     temp = p->NEXT;
     p->NEXT = temp->NEXT;
+    temp->NEXT = NULL;
     free(temp);
 
     printf("Osoba s prezimenom %s je obrisana.\n", lastName);
     return 0;
 }
+
