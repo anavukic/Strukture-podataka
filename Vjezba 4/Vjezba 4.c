@@ -10,7 +10,7 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-// Kreiranje novog �vora
+// Kreiranje novog èvora
 Node* createNode(int value) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (newNode == NULL) {
@@ -22,7 +22,7 @@ Node* createNode(int value) {
     return newNode;
 }
 
-// Push na stog
+// Dodavanje elemenata na vrh stoga
 Node* push(Node* top, int value) {
     Node* newNode = createNode(value);
     newNode->next = top;
@@ -30,7 +30,7 @@ Node* push(Node* top, int value) {
     return top;
 }
 
-// Pop sa stoga
+// Uklananje i vracanje elemenata s vrha stoga
 int pop(Node** top) {
     if (*top == NULL) {
         printf("Greska: Stog je prazan\n");
@@ -48,9 +48,9 @@ int isOperator(char c) {
     return (c == '+' || c == '-' || c == '*' || c == '/');
 }
 
-// Evaluacija postfiks izraza bez strtok
+// funkcija koja računa rezultat postfiks izraza
 int evaluatePostfix(char* expr) {
-    Node* stack = NULL;
+    Node* stack = NULL; 
     int i = 0;
     while (expr[i] != '\0') {
         if (isspace(expr[i])) {
@@ -110,3 +110,4 @@ int main() {
     return 0;
    
 }
+
