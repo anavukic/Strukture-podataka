@@ -6,7 +6,7 @@
 #define MALLOC_ERROR -1
 #define FILE_NOT_FOUND -2
 
-// Struktura èvora
+
 typedef struct tree {
     int value;
     struct tree* left;
@@ -15,7 +15,6 @@ typedef struct tree {
 
 typedef Tree* treePos;
 
-// PROTOTIPI
 treePos insertTree(treePos root, int value);
 treePos deleteTree(treePos root, int value);
 treePos findMin(treePos root);
@@ -114,8 +113,6 @@ treePos postorder(treePos root) {
     return root;
 }
 
-// ================= LEVEL ORDER (FIFO) =================
-
 int printLevelorder(treePos root) {
     if (root == NULL) {
         printf("Stablo je prazno.\n");
@@ -141,7 +138,6 @@ int printLevelorder(treePos root) {
     return 0;
 }
 
-// ================= FREE TREE =================
 
 treePos freeTree(treePos root) {
     if (root == NULL) return NULL;
@@ -151,7 +147,6 @@ treePos freeTree(treePos root) {
     return NULL;
 }
 
-// ================= MAIN =================
 
 int main() {
     treePos root = NULL;
@@ -235,6 +230,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
