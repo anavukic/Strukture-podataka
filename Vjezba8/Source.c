@@ -6,7 +6,7 @@
 #define MALLOC_ERROR -1
 #define FILE_NOT_FOUND -2
 
-// Struktura èvora
+// Struktura Ã¨vora
 typedef struct tree {
     int value;
     struct tree* left;
@@ -28,7 +28,6 @@ int printLevelorder(treePos root);
 
 treePos freeTree(treePos root);
 
-// ================= FUNKCIJE =================
 
 treePos insertTree(treePos root, int value) {
     if (root == NULL) {
@@ -165,7 +164,7 @@ int main() {
         while (1) {
             printf("Odabir: ");
             if (scanf("%d", &izbor) == 1) {
-                while (getchar() != '\n'); // oèisti buffer
+                while (getchar() != '\n'); // oÃ¨isti buffer
                 break;
             }
             else {
@@ -236,5 +235,6 @@ int main() {
 
     return 0;
 }
+
 
 
