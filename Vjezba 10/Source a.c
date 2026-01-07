@@ -36,7 +36,6 @@ int main() {
     head.cityRoot = NULL;
     strcpy(head.name, "");
 
-    // Citanje glavne datoteke
     if (readCountries(&head, "drzave.txt") != 0) {
         printf("Greska: Nije moguce procitati drzave.txt\n");
         return -1;
@@ -161,3 +160,4 @@ void search(ListPos head) {
     }
 
 }
+
