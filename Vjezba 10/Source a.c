@@ -5,7 +5,6 @@
 
 #define MAX 100
 
-// Struktura za grad (Stablo)
 struct _city;
 typedef struct _city* TreePos;
 typedef struct _city {
@@ -15,7 +14,6 @@ typedef struct _city {
     TreePos right;
 } City;
 
-// Struktura za drzavu (Lista)
 struct _country;
 typedef struct _country* ListPos;
 typedef struct _country {
@@ -24,7 +22,6 @@ typedef struct _country {
     ListPos next;
 } Country;
 
-// Prototipi funkcija
 int readCountries(ListPos head, char* filename);
 int readCities(ListPos countryNode, char* filename);
 TreePos insertCity(TreePos root, char* name, int pop);
@@ -162,4 +159,5 @@ void search(ListPos head) {
     else {
         printf("Drzava nije pronadjena.\n");
     }
+
 }
