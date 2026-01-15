@@ -1,5 +1,0 @@
-Seoul,9776000
-Busan,3429000
-Incheon,2923000
-Daegu,2433000
-Daejeon,1475000
